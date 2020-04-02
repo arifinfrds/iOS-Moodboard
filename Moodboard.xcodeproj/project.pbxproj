@@ -14,6 +14,7 @@
 		9275A73C2419D34200EDD698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9275A73B2419D34200EDD698 /* Assets.xcassets */; };
 		9275A73F2419D34200EDD698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9275A73D2419D34200EDD698 /* LaunchScreen.storyboard */; };
 		9275A74A2419D34200EDD698 /* MoodboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A7492419D34200EDD698 /* MoodboardTests.swift */; };
+		929569CA2423173000543294 /* Face.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929569C92423173000543294 /* Face.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9275A7452419D34200EDD698 /* MoodboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9275A7492419D34200EDD698 /* MoodboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardTests.swift; sourceTree = "<group>"; };
 		9275A74B2419D34200EDD698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		929569C92423173000543294 /* Face.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Face.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				9275A73B2419D34200EDD698 /* Assets.xcassets */,
 				9275A73D2419D34200EDD698 /* LaunchScreen.storyboard */,
 				9275A7402419D34200EDD698 /* Info.plist */,
+				929569C92423173000543294 /* Face.storyboard */,
 			);
 			path = Moodboard;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9275A73F2419D34200EDD698 /* LaunchScreen.storyboard in Resources */,
+				929569CA2423173000543294 /* Face.storyboard in Resources */,
 				9275A73C2419D34200EDD698 /* Assets.xcassets in Resources */,
 				9275A73A2419D34100EDD698 /* Main.storyboard in Resources */,
 			);
