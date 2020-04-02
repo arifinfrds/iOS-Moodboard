@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		9275A7332419D34100EDD698 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A7322419D34100EDD698 /* AppDelegate.swift */; };
 		9275A7352419D34100EDD698 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A7342419D34100EDD698 /* SceneDelegate.swift */; };
-		9275A7372419D34100EDD698 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A7362419D34100EDD698 /* ViewController.swift */; };
 		9275A73A2419D34100EDD698 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9275A7382419D34100EDD698 /* Main.storyboard */; };
 		9275A73C2419D34200EDD698 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9275A73B2419D34200EDD698 /* Assets.xcassets */; };
 		9275A73F2419D34200EDD698 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9275A73D2419D34200EDD698 /* LaunchScreen.storyboard */; };
 		9275A74A2419D34200EDD698 /* MoodboardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9275A7492419D34200EDD698 /* MoodboardTests.swift */; };
-		929569CA2423173000543294 /* Face.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 929569C92423173000543294 /* Face.storyboard */; };
+		92985F932436103200909EB4 /* MoodboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92985F922436103200909EB4 /* MoodboardViewController.swift */; };
+		92985F95243610FF00909EB4 /* MoodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92985F94243610FF00909EB4 /* MoodType.swift */; };
+		92985F972436120300909EB4 /* MoodboardPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92985F962436120300909EB4 /* MoodboardPresenter.swift */; };
+		92D91A432436163F002BA2B2 /* MoodboardCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D91A422436163F002BA2B2 /* MoodboardCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +33,6 @@
 		9275A72F2419D34100EDD698 /* Moodboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moodboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9275A7322419D34100EDD698 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9275A7342419D34100EDD698 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9275A7362419D34100EDD698 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9275A7392419D34100EDD698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9275A73B2419D34200EDD698 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9275A73E2419D34200EDD698 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,7 +40,10 @@
 		9275A7452419D34200EDD698 /* MoodboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoodboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9275A7492419D34200EDD698 /* MoodboardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardTests.swift; sourceTree = "<group>"; };
 		9275A74B2419D34200EDD698 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		929569C92423173000543294 /* Face.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Face.storyboard; sourceTree = "<group>"; };
+		92985F922436103200909EB4 /* MoodboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardViewController.swift; sourceTree = "<group>"; };
+		92985F94243610FF00909EB4 /* MoodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodType.swift; sourceTree = "<group>"; };
+		92985F962436120300909EB4 /* MoodboardPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardPresenter.swift; sourceTree = "<group>"; };
+		92D91A422436163F002BA2B2 /* MoodboardCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodboardCalculator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +85,15 @@
 		9275A7312419D34100EDD698 /* Moodboard */ = {
 			isa = PBXGroup;
 			children = (
+				92985F98243612A400909EB4 /* model */,
+				92985F9A243612AC00909EB4 /* presenter */,
+				92985F99243612A800909EB4 /* view */,
 				9275A7322419D34100EDD698 /* AppDelegate.swift */,
 				9275A7342419D34100EDD698 /* SceneDelegate.swift */,
-				9275A7362419D34100EDD698 /* ViewController.swift */,
 				9275A7382419D34100EDD698 /* Main.storyboard */,
 				9275A73B2419D34200EDD698 /* Assets.xcassets */,
 				9275A73D2419D34200EDD698 /* LaunchScreen.storyboard */,
 				9275A7402419D34200EDD698 /* Info.plist */,
-				929569C92423173000543294 /* Face.storyboard */,
 			);
 			path = Moodboard;
 			sourceTree = "<group>";
@@ -100,6 +105,31 @@
 				9275A74B2419D34200EDD698 /* Info.plist */,
 			);
 			path = MoodboardTests;
+			sourceTree = "<group>";
+		};
+		92985F98243612A400909EB4 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				92985F94243610FF00909EB4 /* MoodType.swift */,
+				92D91A422436163F002BA2B2 /* MoodboardCalculator.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		92985F99243612A800909EB4 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				92985F922436103200909EB4 /* MoodboardViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		92985F9A243612AC00909EB4 /* presenter */ = {
+			isa = PBXGroup;
+			children = (
+				92985F962436120300909EB4 /* MoodboardPresenter.swift */,
+			);
+			path = presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,7 +214,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9275A73F2419D34200EDD698 /* LaunchScreen.storyboard in Resources */,
-				929569CA2423173000543294 /* Face.storyboard in Resources */,
 				9275A73C2419D34200EDD698 /* Assets.xcassets in Resources */,
 				9275A73A2419D34100EDD698 /* Main.storyboard in Resources */,
 			);
@@ -204,9 +233,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9275A7372419D34100EDD698 /* ViewController.swift in Sources */,
 				9275A7332419D34100EDD698 /* AppDelegate.swift in Sources */,
 				9275A7352419D34100EDD698 /* SceneDelegate.swift in Sources */,
+				92985F95243610FF00909EB4 /* MoodType.swift in Sources */,
+				92985F932436103200909EB4 /* MoodboardViewController.swift in Sources */,
+				92985F972436120300909EB4 /* MoodboardPresenter.swift in Sources */,
+				92D91A432436163F002BA2B2 /* MoodboardCalculator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

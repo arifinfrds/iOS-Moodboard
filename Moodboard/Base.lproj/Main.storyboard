@@ -7,25 +7,54 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Moodboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Moodboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoodboardViewController" customModule="Moodboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biw-Dj-yHg">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biw-Dj-yHg">
                                 <rect key="frame" x="20" y="108" width="374" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😀" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Nu-Nm-346">
+                                <rect key="frame" x="20" y="213" width="374" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="3Fe-We-bYi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="154"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Vlc-mq-Z2q">
+                                <rect key="frame" x="18" y="527" width="378" height="31"/>
+                                <connections>
+                                    <action selector="sliderDidSlide:" destination="BYZ-38-t0r" eventType="valueChanged" id="vPs-bx-ULx"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Vlc-mq-Z2q" firstAttribute="top" secondItem="5Nu-Nm-346" secondAttribute="bottom" constant="64" id="4o1-X3-OXP"/>
+                            <constraint firstItem="5Nu-Nm-346" firstAttribute="top" secondItem="biw-Dj-yHg" secondAttribute="bottom" constant="64" id="IJH-5H-tkX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vlc-mq-Z2q" secondAttribute="trailing" constant="20" id="JBB-um-AEB"/>
+                            <constraint firstItem="Vlc-mq-Z2q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MsK-Uy-xkw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="biw-Dj-yHg" secondAttribute="trailing" constant="20" id="cAb-nE-eeI"/>
+                            <constraint firstItem="biw-Dj-yHg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="64" id="cJj-Ld-e9I"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Nu-Nm-346" secondAttribute="trailing" constant="20" id="gQB-Qu-l62"/>
+                            <constraint firstItem="5Nu-Nm-346" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wH8-Xz-Q9N"/>
+                            <constraint firstItem="biw-Dj-yHg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="zZf-fI-opr"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="moodEmojiLabel" destination="5Nu-Nm-346" id="2Xa-pv-ahv"/>
+                        <outlet property="moodLabel" destination="biw-Dj-yHg" id="93P-sz-ytT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
